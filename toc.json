@@ -1,0 +1,30 @@
+[
+  {
+    "filename": "3,5-Bis(trifluoromethyl)aniline-sym.zip",
+    "url": "./data/3,5-Bis(trifluoromethyl)aniline-sym.zip"
+  },
+  {
+    "filename":"arborinine_full_assignments-a.zip",
+    "url": "./data/arborinine_full_assignments-a.zip"
+  },
+  {
+    "filename":"arborinine_full_assignments.zip",
+    "url": "./data/arborinine_full_assignments.zip"
+  },
+  {
+    "filename":"caryophyllene_oxide_full_assignments_hasError.zip",
+    "url": "./data/caryophyllene_oxide_full_assignments_hasError.zip"
+  },
+  {
+    "filename":"generated.zip",
+    "url": "./data/generated.zip"
+  },
+  {
+    "filename":"menthol_1D_1H_assigned_J.zip",
+    "url": "./data/menthol_1D_1H_assigned_J.zip"
+  },
+  {
+    "filename":"menthol_1D_1H_UNassigned_J.zip",
+    "url": "./data/menthol_1D_1H_UNassigned_J.zip"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "name": "nmredata-data-test",
+  "version": "0.0.1",
+  "description": "provides zipped nmrRecord data files for testing purposes",
+  "keywords": [
+    "nmrRecord",
+    "nmr",
+    "nmredata",
+    "dataset"
+  ],
+  "main": "index.js",
+  "files": [
+    "toc.json",
+    "data/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "author": "jobo322",
+  "license": "MIT",
+  "dependencies": {
+    "recursive-readdir-synchronous": "0.0.4"
+  }
+}
