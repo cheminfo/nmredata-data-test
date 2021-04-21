@@ -12,6 +12,14 @@
     "url": "./data/arborinine_full_assignments.zip"
   },
   {
+    "filename":"arborinine_1D_assignments.zip",
+    "url": "./data/arborinine_1D_assignments.zip"
+  },
+  {
+    "filename":"arborinine_2D_13C_1J_1H_assignment.zip",
+    "url": "./data/arborinine_2D_13C_1J_1H_assignment.zip"
+  },
+  {
     "filename":"caryophyllene_oxide_full_assignments_hasError.zip",
     "url": "./data/caryophyllene_oxide_full_assignments_hasError.zip"
   },
