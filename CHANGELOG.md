@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.1](https://www.github.com/cheminfo/nmredata-data-test/compare/v0.1.0...v0.1.1) (2021-06-14)
+
+
+### Bug Fixes
+
+* data/generated.zip ([77d78aa](https://www.github.com/cheminfo/nmredata-data-test/commit/77d78aa7a1b9d0623b6636636ba78ccac120a1c2))
+
 ## 0.1.0 (2021-04-21)
 
 
