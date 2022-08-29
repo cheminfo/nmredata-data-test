@@ -2,23 +2,51 @@
   "name": "nmredata-data-test",
   "version": "0.1.1",
   "description": "provides zipped nmrRecord data files for testing purposes",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "files": [
+    "lib",
+    "src",
+    "data/*"
+  ],
+  "scripts": {
+    "eslint": "eslint src",
+    "eslint-fix": "npm run eslint -- --fix",
+    "prepack": "rollup -c",
+    "prettier": "prettier --check src",
+    "prettier-write": "prettier --write src",
+    "test": "npm run test-only && npm run eslint && npm run prettier",
+    "test-only": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheminfo/nmredata-data-test.git"
+  },
   "keywords": [
     "nmrRecord",
     "nmr",
     "nmredata",
     "dataset"
   ],
-  "main": "index.js",
-  "files": [
-    "toc.json",
-    "data/*"
-  ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
-  },
-  "author": "jobo322",
+  "author": "J. Alejandro Bolanos A. <jose.bolanos@correounivalle.edu.co>; (https://github.com/jobo322)",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cheminfo/nmredata-data-test/issues"
+  },
+  "homepage": "https://github.com/cheminfo/nmredata-data-test#readme",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.18.6",
+    "@types/jest": "^28.1.8",
+    "eslint": "^8.23.0",
+    "eslint-config-cheminfo": "^8.0.2",
+    "jest": "^29.0.1",
+    "prettier": "^2.7.1",
+    "rollup": "^2.78.1"
+  },
   "dependencies": {
-    "recursive-readdir-synchronous": "0.0.4"
+    "filelist-utils": "^0.7.1"
   }
 }
