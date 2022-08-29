@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.2.0](https://github.com/cheminfo/nmredata-data-test/compare/v0.1.1...v0.2.0) (2022-08-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* use filelist-utils (#6)
+
+### Features
+
+* use filelist-utils ([#6](https://github.com/cheminfo/nmredata-data-test/issues/6)) ([b48149a](https://github.com/cheminfo/nmredata-data-test/commit/b48149a24a4ba1326083ddc5a4072d21b5e1cca5))
+
 ### [0.1.1](https://www.github.com/cheminfo/nmredata-data-test/compare/v0.1.0...v0.1.1) (2021-06-14)
 
 
