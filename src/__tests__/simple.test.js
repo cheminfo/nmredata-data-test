@@ -1,6 +1,6 @@
 import { fileListFromZip } from 'filelist-utils';
 
-import { getData, getFile, getFileListUnzip, getList } from '..';
+import { getData, getFile, getFileList, getFileListUnzip, getList } from '..';
 
 describe('simple test', () => {
   const filename = 'generated.zip';
@@ -12,7 +12,7 @@ describe('simple test', () => {
     const fileList = await getFileListUnzip(filename);
     expect(fileList.map((file) => file.name)).toContain('nmredata.sdf');
   });
-  it('getFileList', async () => {
+  it('getFile', async () => {
     const file = await getFile(filename);
     expect(file.name).toContain(filename);
   });
@@ -20,5 +20,9 @@ describe('simple test', () => {
     const file = await getData(filename);
     const fileList = await fileListFromZip(file);
     expect(fileList.map((file) => file.name)).toContain('nmredata.sdf');
+  });
+  it('getFileList', async () => {
+    const fileList = await getFileList();
+    expect(fileList.map((f) => f.name)).toContain(filename);
   });
 });
