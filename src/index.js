@@ -24,19 +24,27 @@ export async function getList() {
   return files.map((d) => d.name);
 }
 
-export async function getFileList(name) {
+export async function getFile(name) {
   const files = await loadFileList(path);
-  const result = files.filter((d) => d.name === name);
+  const result = files.find((d) => d.name === name);
 
-  if (result.length < 1) {
+  if (!result) {
     throw new Error(`There is not a file with name: ${name}`);
   }
 
-  return fileListUnzip(result);
+  return result;
+}
+
+export function getFileList() {
+  return loadFileList(path);
+}
+
+export function getFileListUnzip(name) {
+  return getFile(name).then((file) => fileListUnzip([file]));
 }
 
 export async function getData(name) {
   const files = await loadFileList(path);
-  const result = files.filter((d) => d.name === name);
-  return result[0].arrayBuffer();
+  const result = files.find((d) => d.name === name);
+  return result.arrayBuffer();
 }
