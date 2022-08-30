@@ -6,7 +6,10 @@ provides zipped nmrRecord data files for testing purposes.
 
 ```js
 import { getData, getFileList, getList } from "nmredata-data-test";
-console.log(getList()); // to get a promise of a list of file names
-console.log(getFileList("androstene.zip")); // to get a promise of an array of fileList (content of the nmrRecord).
-const buffer = getData("androstene.zip"); // to get a promise of the arrayBuffer of the file.
+
+const listOfFilenames = await getList();
+
+const filename = "androstene.zip";
+const fileList = await getFileList(filename); //PartialFileList of the unzipped file.
+const buffer = await getData(filename); //arrayBuffer of the file
 ```

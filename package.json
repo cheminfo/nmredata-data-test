@@ -4,10 +4,12 @@
   "description": "provides zipped nmrRecord data files for testing purposes",
   "main": "lib/index.js",
   "module": "src/index.js",
+  "types": "nmredata-data-test.d.ts",
   "files": [
     "lib",
     "src",
-    "data/*"
+    "data/*",
+    "nmredata-data-test.d.ts"
   ],
   "scripts": {
     "eslint": "eslint src",
@@ -15,7 +17,7 @@
     "prepack": "rollup -c",
     "prettier": "prettier --check src",
     "prettier-write": "prettier --write src",
-    "test": "npm run test-only && npm run eslint && npm run prettier",
+    "test": "npm run test-only && npm run eslint-fix && npm run prettier",
     "test-only": "jest --coverage"
   },
   "repository": {
