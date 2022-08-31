@@ -1,9 +1,9 @@
-import { PartialFileList } from "filelist-utils";
+import { PartialFile, PartialFileList } from "filelist-utils";
 
-export async function getList(): Promise<string[]>;
+export function getList(): Promise<string[]>;
 
-export async function getFile(name: string): Promise<PartialFileList>;
+export function getFile(name: string): Promise<PartialFile>;
 
-export async function getFileListUnZip(name: string): Promise<PartialFileList>;
+export function getFileListUnZip(name: string): Promise<PartialFileList>;
 
-export async function getData(name: string): Promise<ArrayBuffer>;
+export function getData(name: string): Promise<ArrayBuffer>;
