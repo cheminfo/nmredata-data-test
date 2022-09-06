@@ -5,11 +5,12 @@ provides zipped nmrRecord data files for testing purposes.
 ## usage
 
 ```js
-import { getData, getFileList, getList } from "nmredata-data-test";
+import { getData, getFile, getList, getFileListUnZip } from "nmredata-data-test";
 
 const listOfFilenames = await getList();
 
 const filename = "androstene.zip";
-const fileList = await getFileList(filename); //PartialFileList of the unzipped file.
+const file = await getFile(filename); //PartialFile of the zip file (nmrRecord).
+const fileList = await getFileListUnZip(filename); //PartialFileList of the unzipped file.
 const buffer = await getData(filename); //arrayBuffer of the file
 ```
