@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0](https://github.com/cheminfo/nmredata-data-test/compare/v0.2.0...v0.3.0) (2022-09-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* add more specific functions (#11)
+
+### Features
+
+* add more specific functions ([#11](https://github.com/cheminfo/nmredata-data-test/issues/11)) ([2b42f6a](https://github.com/cheminfo/nmredata-data-test/commit/2b42f6ab9d8344729ccbb8682e8bdfb96f7006f1))
+
+
+### Bug Fixes
+
+* update readme n add types ([9105f55](https://github.com/cheminfo/nmredata-data-test/commit/9105f554d95ea29c0468173a880d8a09f68baa0d))
+
 ## [0.2.0](https://github.com/cheminfo/nmredata-data-test/compare/v0.1.1...v0.2.0) (2022-08-29)
 
 
