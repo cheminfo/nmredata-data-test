@@ -1,17 +1,17 @@
 import { join } from 'path';
 
-import { fileListFromPath, fileListUnzip } from 'filelist-utils';
+import { fileCollectionFromPath, fileCollectionFromZip } from 'filelist-utils';
 
 const path = join(__dirname, '../data/');
 
 const cache = {};
 
-async function loadFileList(path) {
+async function loadFileCollection(path) {
   if (cache[path]) {
     return cache[path];
   }
 
-  cache[path] = await fileListFromPath(path, {
+  cache[path] = await fileCollectionFromPath(path, {
     unzip: { zipExtensions: [] },
     ungzip: { gzipExtensions: [] },
   });
@@ -20,13 +20,13 @@ async function loadFileList(path) {
 }
 
 export async function getList() {
-  const files = await loadFileList(path);
-  return files.map((d) => d.name);
+  const fileCollection = await loadFileCollection(path);
+  return fileCollection.files.map((d) => d.name);
 }
 
 export async function getFile(name) {
-  const files = await loadFileList(path);
-  const result = files.find((d) => d.name === name);
+  const fileCollection = await loadFileCollection(path);
+  const result = fileCollection.files.find((d) => d.name === name);
 
   if (!result) {
     throw new Error(`There is not a file with name: ${name}`);
@@ -35,16 +35,16 @@ export async function getFile(name) {
   return result;
 }
 
-export function getFileList() {
-  return loadFileList(path);
+export function getFileCollection() {
+  return loadFileCollection(path);
 }
 
-export function getFileListUnzip(name) {
-  return getFile(name).then((file) => fileListUnzip([file]));
+export function getFileCollectionUnzip(name) {
+  return getData(name).then((file) => fileCollectionFromZip(file));
 }
 
 export async function getData(name) {
-  const files = await loadFileList(path);
-  const result = files.find((d) => d.name === name);
+  const fileCollection = await loadFileCollection(path);
+  const result = fileCollection.files.find((d) => d.name === name);
   return result.arrayBuffer();
 }
