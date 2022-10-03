@@ -1,6 +1,12 @@
-import { fileListFromZip } from 'filelist-utils';
+import { fileCollectionFromZip } from 'filelist-utils';
 
-import { getData, getFile, getFileList, getFileListUnzip, getList } from '..';
+import {
+  getData,
+  getFile,
+  getFileCollection,
+  getFileCollectionUnzip,
+  getList,
+} from '..';
 
 describe('simple test', () => {
   const filename = 'generated.zip';
@@ -8,9 +14,11 @@ describe('simple test', () => {
     const list = await getList();
     expect(list).toContain(filename);
   });
-  it('getFileListUnZip', async () => {
-    const fileList = await getFileListUnzip(filename);
-    expect(fileList.map((file) => file.name)).toContain('nmredata.sdf');
+  it('fileCollectionUnzip', async () => {
+    const fileCollection = await getFileCollectionUnzip(filename);
+    expect(fileCollection.files.map((file) => file.name)).toContain(
+      'nmredata.sdf',
+    );
   });
   it('getFile', async () => {
     const file = await getFile(filename);
@@ -18,11 +26,13 @@ describe('simple test', () => {
   });
   it('getData', async () => {
     const file = await getData(filename);
-    const fileList = await fileListFromZip(file);
-    expect(fileList.map((file) => file.name)).toContain('nmredata.sdf');
+    const fileCollection = await fileCollectionFromZip(file);
+    expect(fileCollection.files.map((file) => file.name)).toContain(
+      'nmredata.sdf',
+    );
   });
-  it('getFileList', async () => {
-    const fileList = await getFileList();
-    expect(fileList.map((f) => f.name)).toContain(filename);
+  it('fileCollection', async () => {
+    const fileCollection = await getFileCollection();
+    expect(fileCollection.files.map((f) => f.name)).toContain(filename);
   });
 });
