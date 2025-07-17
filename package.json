@@ -1,6 +1,6 @@
 {
   "name": "nmredata-data-test",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "description": "Provides zipped nmrRecord data files for testing purposes",
   "type": "module",
   "exports": "./lib/index.js",
