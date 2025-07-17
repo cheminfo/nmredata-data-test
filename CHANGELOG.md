@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/cheminfo/nmredata-data-test/compare/v0.4.0...v1.0.0) (2025-07-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate to TS and use data-test-api ([#15](https://github.com/cheminfo/nmredata-data-test/issues/15))
+
+### Features
+
+* migrate to TS and use data-test-api ([#15](https://github.com/cheminfo/nmredata-data-test/issues/15)) ([63ebb4d](https://github.com/cheminfo/nmredata-data-test/commit/63ebb4dc0d6dd4a133b8e435696805082aa50174))
+
 ## [0.4.0](https://github.com/cheminfo/nmredata-data-test/compare/v0.3.0...v0.4.0) (2022-10-03)
 
 
